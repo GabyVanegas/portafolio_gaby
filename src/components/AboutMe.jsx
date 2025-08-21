@@ -23,8 +23,8 @@ export const AboutMe = () => {
                                 {" "}
                                 Contactame
                             </a>
-                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
-                                Download CV
+                            <a href="/public/projects/cv.pdf" download="cv.pdf"  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                                Descargar CV
                             </a>
                         </div>
                     </div>
@@ -48,9 +48,9 @@ export const AboutMe = () => {
                                  <User className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Web Developer</h4>
+                                    <h4 className="font-semibold text-lg">Mobile App Developer</h4>
                                     <p className="text-muted-foreground">
-                                        Creadora de paginas webs responsivas y modernas
+                                    Desarrollo de aplicaciones móviles nativas y multiplataforma, optimizadas para rendimiento y experiencia de usuario.
                                     </p>
                                 </div>
                             </div>
@@ -62,9 +62,9 @@ export const AboutMe = () => {
                                  <Briefcase className="h-6 w-6 text-primary"/>
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Web Developer</h4>
+                                    <h4 className="font-semibold text-lg">Backend Developer</h4>
                                     <p className="text-muted-foreground">
-                                        Creadora de paginas webs responsivas y modernas
+                                    Construcción de APIs escalables y seguras con Node.js y Laravel, aplicando arquitectura limpia y buenas prácticas.
                                     </p>
                                 </div>
                             </div>
