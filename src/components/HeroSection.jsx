@@ -9,7 +9,7 @@ export const HeroSection = () => {
         muted
         loop
         playsInline
-        poster="/video/nebulosa-poster.jpg"
+        poster="/public/projects/nebulosa.mp4"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/projects/nebulosa.mp4" type="video/mp4" />
