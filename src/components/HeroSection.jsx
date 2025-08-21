@@ -12,7 +12,7 @@ export const HeroSection = () => {
         poster="/video/nebulosa-poster.jpg"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/public/projects/nebulosa.mp4" type="video/mp4" />
+        <source src="/projects/nebulosa.mp4" type="video/mp4" />
       </video>
 
       {/* Capa opaca encima para dar efecto “vidrio” */}
