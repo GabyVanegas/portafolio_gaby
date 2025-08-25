@@ -102,10 +102,9 @@ import {
               <div className="pt-2">
                 <h4 className="font-medium mb-3">Conecta conmigo</h4>
                 <div className="flex items-center gap-4">
-                  <a aria-label="LinkedIn" href="#" target="_blank" rel="noreferrer"><Linkedin /></a>
-                  <a aria-label="Twitter" href="#" target="_blank" rel="noreferrer"><Twitter /></a>
-                  <a aria-label="Facebook" href="#" target="_blank" rel="noreferrer"><Facebook /></a>
-                  <a aria-label="Instagram" href="#" target="_blank" rel="noreferrer"><Instagram /></a>
+                  <a aria-label="LinkedIn" href="https://www.linkedin.com/in/gabriela0vanegas" target="_blank" rel="noreferrer"><Linkedin /></a>
+                  <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61553263212099" target="_blank" rel="noreferrer"><Facebook /></a>
+                  <a aria-label="Instagram" href="https://www.instagram.com/gabyy_vanegas?igsh=MW53eXF2NWoyMGNvdg==" target="_blank" rel="noreferrer"><Instagram /></a>
                 </div>
               </div>
             </div>

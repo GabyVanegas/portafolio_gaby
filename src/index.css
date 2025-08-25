@@ -1,14 +1,13 @@
+/* ====== Tailwind base ====== */
 @import "tailwindcss";
 
-
+/* ====== Design tokens y animaciones ====== */
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-
   --color-card: hsl(var(--card));
 
   --animate-float: float 6s ease-in-out infinite;
@@ -21,117 +20,107 @@
   --animate-meteor: meteor 5s linear infinite;
 
   @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
   @keyframes pulse-subtle {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.8;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
   }
   @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
   @keyframes meteor {
-    0% {
-      transform: rotate(215deg) translateX(0);
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(215deg) translateX(-500px);
-      opacity: 0;
-    }
+    0%   { transform: rotate(215deg) translateX(0);   opacity: 1; }
+    70%  { opacity: 1; }
+    100% { transform: rotate(215deg) translateX(-500px); opacity: 0; }
   }
 }
 
+/* ====== Paleta y base ====== */
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* --- LIGHT: lavanda tech --- */
+    --background: 252 48% 99%;
+    --foreground: 232 36% 16%;
 
     --card: 0 0% 100%;
+    --card-foreground: var(--foreground);
 
-    --primary: 250 47% 60%;
+    --muted: 252 32% 96%;
+    --muted-foreground: 232 20% 40%;
+
+    --secondary: 252 55% 94%;
+    --secondary-foreground: 252 35% 32%;
+
+    --accent: 258 70% 92%;
+    --accent-foreground: 256 45% 28%;
+
+    --primary: 250 64% 58%;
     --primary-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
+    --border: 252 28% 88%;
+    --ring: 252 85% 62%;
+    --input: 0 0% 100%;
+
+    --shadow-soft: 0 8px 24px rgba(64, 41, 120, .08);
+    --shadow-card: 0 10px 30px rgba(64, 41, 120, .10);
   }
 
+  /* --- DARK mejorado (opcional) --- */
   .dark {
-    --background: 222 47% 4%;
+    --background: 232 52% 6%;
     --foreground: 213 31% 91%;
 
-    --card: 222 47% 8%;
+    --card: 232 52% 10%;
+    --card-foreground: var(--foreground);
 
-    --primary: 250 65% 65%;
+    --muted: 232 35% 12%;
+    --muted-foreground: 220 15% 70%;
+
+    --secondary: 252 45% 14%;
+    --secondary-foreground: 213 31% 91%;
+
+    --accent: 258 60% 18%;
+    --accent-foreground: 213 31% 91%;
+
+    --primary: 250 70% 66%;
     --primary-foreground: 213 31% 91%;
 
-    --border: 217 33% 20%;
+    --border: 232 28% 22%;
+    --ring: 252 85% 62%;
+    --input: 232 52% 8%;
+
+    --shadow-soft: 0 8px 24px rgba(0,0,0,.35);
+    --shadow-card: 0 10px 30px rgba(0,0,0,.45);
   }
 
-  * {
-    @apply border-border;
-  }
-
-  html {
-    @apply scroll-smooth;
-  }
-
+  * { @apply border-border; }
+  html { @apply scroll-smooth; }
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
+/* ====== Container ====== */
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
-
-  @media (width >= 640px) {
-    max-width: 640px;
-  }
-  @media (width >= 768px) {
-    max-width: 768px;
-  }
-  @media (width >= 1024px) {
-    max-width: 1024px;
-  }
-  @media (width >= 1280px) {
-    max-width: 1280px;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
+  @media (width >= 640px) { max-width: 640px; }
+  @media (width >= 768px) { max-width: 768px; }
+  @media (width >= 1024px){ max-width: 1024px; }
+  @media (width >= 1280px){ max-width: 1280px; }
+  @media (width >= 1400px){ max-width: 1400px; }
 }
 
-@utility text-glow {
-  @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
-}
+/* ====== Utilidades visuales ====== */
+@utility text-glow { @apply relative; text-shadow: 0 0 10px rgba(167,139,250,.5); }
 
-@utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
-}
+@utility card-hover { @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg; }
 
+/* borde con gradiente (mantengo el tuyo) */
 @utility gradient-border {
   @apply relative rounded-md;
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
@@ -139,26 +128,92 @@
   border: 1px solid transparent;
 }
 
+/* botón primario (mantengo y mejora de focus) */
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
          hover:scale-105 active:scale-95;
 }
-
-@utility star {
-  @apply absolute rounded-full bg-white;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+.cosmic-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in oklab, hsl(var(--ring)) 25%, transparent);
 }
 
-@utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+/* estrellas/meteoros (tuyos) */
+@utility star   { @apply absolute rounded-full bg-white; box-shadow: 0 0 10px 2px rgba(255,255,255,.4); }
+@utility meteor { @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full; box-shadow: 0 0 10px 5px rgba(255,255,255,.3); }
+
+/* ====== NUEVAS utilidades para modo claro potente ====== */
+
+/* Sección con “wash” sutil (ideal para Acerca/Contacto) */
+@utility section-muted {
+  @apply rounded-3xl border;
+  background: hsl(var(--muted));
 }
 
+/* Tarjetas tipo “glass” coherentes en ambos temas */
+@utility glass-card {
+  @apply rounded-2xl border;
+  background: color-mix(in oklab, hsl(var(--card)) 92%, transparent);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: saturate(1.2) blur(6px);
+}
+
+/* Separador suave entre secciones */
+@utility section-divider {
+  @apply my-16 h-px w-full;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--border)) 20%,
+    hsl(var(--border)) 80%,
+    transparent 100%
+  );
+}
+
+/* Botón outline/secondary que en claro no se “lava” */
+@utility button-outline {
+  @apply px-5 py-2 rounded-full font-medium border transition-all duration-300;
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+/* estado hover fuera de @utility (válido) */
+.button-outline:hover {
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  box-shadow: 0 0 0 4px color-mix(in oklab, hsl(var(--ring)) 20%, transparent);
+}
+
+/* Chips/etiquetas */
+@utility chip {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm border;
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* Inputs sólidos con foco accesible */
+@utility input-solid {
+  @apply w-full px-4 py-3 rounded-md border focus:outline-hidden focus:ring-2;
+  background: hsl(var(--input));
+  box-shadow: inset 0 1px 0 rgba(0,0,0,.04);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.input-solid:focus { @apply ring-primary; border-color: hsl(var(--ring)); }
+
+/* Overlay para Hero en modo claro (mejor legibilidad sobre video) */
+@utility hero-overlay-light {
+  background: radial-gradient(
+    1200px 500px at 50% 0%,
+    color-mix(in oklab, hsl(var(--background)) 78%, transparent) 0%,
+    transparent 55%
+  );
+}
+
+/* ====== App root ====== */
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
-  

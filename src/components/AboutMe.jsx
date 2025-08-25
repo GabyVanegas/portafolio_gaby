@@ -8,13 +8,13 @@ export const AboutMe = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
                     Acerca <span className="text-primary">De</span>
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div className="space-y-6 text-center md:text-left" >
                         <h3 className="text-2xl font-semibold">Full Stack & Mobile App Developer</h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground max-w-3xl mx-auto">
                         Soy desarrolladora de software especializada en el desarrollo de aplicaciones móviles con Kotlin y en la creación de interfaces web dinámicas con React. Además, trabajo con diversos lenguajes como Java, JavaScript, PHP, C++ y C#, y con frameworks modernos como Node.js, Laravel y Tailwind CSS.
                         </p>
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground max-w-3xl mx-auto">
                         Combino experiencia en frontend y backend para construir soluciones escalables, seguras y con un diseño centrado en el usuario. Me apasiona transformar ideas en productos digitales funcionales, integrando buenas prácticas de programación, arquitectura limpia y tecnologías actuales para garantizar calidad y rendimiento.
                         </p>
 
@@ -23,7 +23,7 @@ export const AboutMe = () => {
                                 {" "}
                                 Contactame
                             </a>
-                            <a href="/public/projects/cv.pdf" download="cv.pdf"  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                            <a href="/projects/cv.pdf" download="cv.pdf"  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
                                 Descargar CV
                             </a>
                         </div>
