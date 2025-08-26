@@ -19,15 +19,7 @@ const projects = [
        demoUrl: "#",
        gitHubUrl: "#",
     },
-    {
-        id: 3,
-       title: "Manitas",
-       description: "Aplicación de aprendizaje de la lengua de señas salvadoreña, con   .",
-       image: "/projects/manitas.jpg",
-       tags: ["Kotlin", "Firebase AUTH"],
-       demoUrl: "#",
-       gitHubUrl: "#",
-    }
+    
 ]
 
 export const ProjectsSection = () =>{
@@ -65,11 +57,11 @@ export const ProjectsSection = () =>{
                                 <div className="flex space-x-3">
                                     <a href={project.demoUrl} className="text-foreground/80 hover:text-primary transition-colors duration-300" target="_blank">
                                     
-                                        <ExternalLink size={20}/>
+                                        {/*<ExternalLink size={20}/>*/} 
                                     </a>
                                     <a href={project.gitHubUrl} className="text-foreground/80 hover:text-primary transition-colors duration-300" target="_blank">
                                     
-                                        <Github size={20}/>
+                                        {/*<Github size={20}/>*/} 
                                     </a>
                                 </div>
                                 </div>
