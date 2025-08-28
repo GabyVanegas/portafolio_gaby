@@ -23,7 +23,7 @@ export const AboutMe = () => {
                                 {" "}
                                 Contactame
                             </a>
-                            <a href="/projects/cv.pdf" download="cv.pdf"  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
+                            <a href="/projects/cv_Gabriela_Vanegas.pdf" download="cv_Gabriela_Vanegas.pdf"  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">
                                 Descargar CV
                             </a>
                         </div>

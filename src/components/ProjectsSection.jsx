@@ -7,8 +7,8 @@ const projects = [
        description: "Aplicación de aprendizaje de la lengua de señas salvadoreña, con Kotlin.",
        image: "/projects/manitas.jpg",
        tags: ["Kotlin", "Firebase AUTH"],
-       demoUrl: "#",
-       gitHubUrl: "#",
+       //demoUrl: "#",
+       //gitHubUrl: "#",
     },
     {
         id: 2,
@@ -16,8 +16,8 @@ const projects = [
        description: "Videojuego donde el objetivo es disparar a tus enemigos y evitar morir a toda costa.",
        image: "/projects/galaticSpace.png",
        tags: ["HTML", "CSS", "JavaScript"],
-       demoUrl: "#",
-       gitHubUrl: "#",
+       //demoUrl: "#",
+       gitHubUrl: "https://github.com/GabyVanegas/Galatic_Space",
     },
     
 ]
@@ -61,7 +61,7 @@ export const ProjectsSection = () =>{
                                     </a>
                                     <a href={project.gitHubUrl} className="text-foreground/80 hover:text-primary transition-colors duration-300" target="_blank">
                                     
-                                        {/*<Github size={20}/>*/} 
+                                        <Github size={20}/>
                                     </a>
                                 </div>
                                 </div>
